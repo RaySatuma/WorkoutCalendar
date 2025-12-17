@@ -10,19 +10,25 @@ using System.Windows.Forms;
 
 namespace finalProject
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form4 form4 = new Form4();
+
             this.Hide();
-            form2.ShowDialog();
+            form4.ShowDialog();
             this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
