@@ -30,5 +30,10 @@ namespace finalProject
         {
             this.Close();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
