@@ -15,6 +15,11 @@ namespace finalProject
         public Form3()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ClientSize = new Size(800, 600);
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +34,11 @@ namespace finalProject
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

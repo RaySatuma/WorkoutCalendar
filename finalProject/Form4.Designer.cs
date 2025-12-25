@@ -33,22 +33,25 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(296, 221);
+            this.button1.Location = new System.Drawing.Point(686, 524);
+            this.button1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 53);
+            this.button1.Size = new System.Drawing.Size(88, 26);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
+            this.button1.Text = "→";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.Name = "Form4";
             this.Text = "Record";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
 
         }

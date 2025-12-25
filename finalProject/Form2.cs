@@ -15,6 +15,10 @@ namespace finalProject
         public Form2()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ClientSize = new Size(800, 600);
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
 
         private void button2_Click(object sender, EventArgs e)
