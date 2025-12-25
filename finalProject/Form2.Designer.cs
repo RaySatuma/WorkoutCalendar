@@ -34,17 +34,18 @@
             this.Home_Language_Choose = new System.Windows.Forms.ComboBox();
             this.Home_Language_Text = new System.Windows.Forms.Label();
             this.First_time = new System.Windows.Forms.Panel();
-            this.Bio_sex_Text = new System.Windows.Forms.Label();
-            this.Age_Text = new System.Windows.Forms.Label();
-            this.Height_Text = new System.Windows.Forms.Label();
-            this.Weight_Text = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.First_Time_Back_Button = new System.Windows.Forms.Button();
             this.First_Time_Text = new System.Windows.Forms.Label();
+            this.First_Time_Back_Button = new System.Windows.Forms.Button();
+            this.Weight_box = new System.Windows.Forms.TextBox();
+            this.Height_box = new System.Windows.Forms.TextBox();
+            this.Age_box = new System.Windows.Forms.TextBox();
+            this.Sex_choose = new System.Windows.Forms.ComboBox();
+            this.Weight_Text = new System.Windows.Forms.Label();
+            this.Height_Text = new System.Windows.Forms.Label();
+            this.Age_Text = new System.Windows.Forms.Label();
+            this.Bio_sex_Text = new System.Windows.Forms.Label();
             this.Username_invisible = new System.Windows.Forms.Label();
+            this.Confirm_button = new System.Windows.Forms.Button();
             this.First_time.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,96 +99,21 @@
             // 
             // First_time
             // 
+            this.First_time.Controls.Add(this.Confirm_button);
             this.First_time.Controls.Add(this.First_Time_Text);
             this.First_time.Controls.Add(this.First_Time_Back_Button);
-            this.First_time.Controls.Add(this.textBox3);
-            this.First_time.Controls.Add(this.textBox2);
-            this.First_time.Controls.Add(this.textBox1);
-            this.First_time.Controls.Add(this.comboBox1);
+            this.First_time.Controls.Add(this.Weight_box);
+            this.First_time.Controls.Add(this.Height_box);
+            this.First_time.Controls.Add(this.Age_box);
+            this.First_time.Controls.Add(this.Sex_choose);
             this.First_time.Controls.Add(this.Weight_Text);
             this.First_time.Controls.Add(this.Height_Text);
             this.First_time.Controls.Add(this.Age_Text);
             this.First_time.Controls.Add(this.Bio_sex_Text);
-            this.First_time.Location = new System.Drawing.Point(358, 219);
+            this.First_time.Location = new System.Drawing.Point(0, 0);
             this.First_time.Name = "First_time";
             this.First_time.Size = new System.Drawing.Size(369, 228);
             this.First_time.TabIndex = 5;
-            // 
-            // Bio_sex_Text
-            // 
-            this.Bio_sex_Text.AutoSize = true;
-            this.Bio_sex_Text.Location = new System.Drawing.Point(60, 60);
-            this.Bio_sex_Text.Name = "Bio_sex_Text";
-            this.Bio_sex_Text.Size = new System.Drawing.Size(33, 12);
-            this.Bio_sex_Text.TabIndex = 0;
-            this.Bio_sex_Text.Text = "label1";
-            // 
-            // Age_Text
-            // 
-            this.Age_Text.AutoSize = true;
-            this.Age_Text.Location = new System.Drawing.Point(60, 100);
-            this.Age_Text.Name = "Age_Text";
-            this.Age_Text.Size = new System.Drawing.Size(33, 12);
-            this.Age_Text.TabIndex = 1;
-            this.Age_Text.Text = "label2";
-            // 
-            // Height_Text
-            // 
-            this.Height_Text.AutoSize = true;
-            this.Height_Text.Location = new System.Drawing.Point(60, 140);
-            this.Height_Text.Name = "Height_Text";
-            this.Height_Text.Size = new System.Drawing.Size(33, 12);
-            this.Height_Text.TabIndex = 2;
-            this.Height_Text.Text = "label3";
-            // 
-            // Weight_Text
-            // 
-            this.Weight_Text.AutoSize = true;
-            this.Weight_Text.Location = new System.Drawing.Point(60, 180);
-            this.Weight_Text.Name = "Weight_Text";
-            this.Weight_Text.Size = new System.Drawing.Size(33, 12);
-            this.Weight_Text.TabIndex = 3;
-            this.Weight_Text.Text = "label4";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(138, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(138, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 7;
-            // 
-            // First_Time_Back_Button
-            // 
-            this.First_Time_Back_Button.Location = new System.Drawing.Point(288, 196);
-            this.First_Time_Back_Button.Name = "First_Time_Back_Button";
-            this.First_Time_Back_Button.Size = new System.Drawing.Size(75, 23);
-            this.First_Time_Back_Button.TabIndex = 8;
-            this.First_Time_Back_Button.Text = "button3";
-            this.First_Time_Back_Button.UseVisualStyleBackColor = true;
-            this.First_Time_Back_Button.Click += new System.EventHandler(this.First_Time_Back_Button_Click);
             // 
             // First_Time_Text
             // 
@@ -199,6 +125,85 @@
             this.First_Time_Text.TabIndex = 9;
             this.First_Time_Text.Text = "label1";
             // 
+            // First_Time_Back_Button
+            // 
+            this.First_Time_Back_Button.Location = new System.Drawing.Point(288, 196);
+            this.First_Time_Back_Button.Name = "First_Time_Back_Button";
+            this.First_Time_Back_Button.Size = new System.Drawing.Size(75, 23);
+            this.First_Time_Back_Button.TabIndex = 8;
+            this.First_Time_Back_Button.Text = "button3";
+            this.First_Time_Back_Button.UseVisualStyleBackColor = true;
+            this.First_Time_Back_Button.Click += new System.EventHandler(this.First_Time_Back_Button_Click);
+            // 
+            // Weight_box
+            // 
+            this.Weight_box.Location = new System.Drawing.Point(138, 175);
+            this.Weight_box.Name = "Weight_box";
+            this.Weight_box.Size = new System.Drawing.Size(121, 22);
+            this.Weight_box.TabIndex = 7;
+            this.Weight_box.TextChanged += new System.EventHandler(this.Weight_box_TextChanged);
+            // 
+            // Height_box
+            // 
+            this.Height_box.Location = new System.Drawing.Point(138, 134);
+            this.Height_box.Name = "Height_box";
+            this.Height_box.Size = new System.Drawing.Size(121, 22);
+            this.Height_box.TabIndex = 6;
+            this.Height_box.TextChanged += new System.EventHandler(this.Height_box_TextChanged);
+            // 
+            // Age_box
+            // 
+            this.Age_box.Location = new System.Drawing.Point(138, 94);
+            this.Age_box.Name = "Age_box";
+            this.Age_box.Size = new System.Drawing.Size(121, 22);
+            this.Age_box.TabIndex = 5;
+            this.Age_box.TextChanged += new System.EventHandler(this.Age_box_TextChanged);
+            // 
+            // Sex_choose
+            // 
+            this.Sex_choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Sex_choose.FormattingEnabled = true;
+            this.Sex_choose.Location = new System.Drawing.Point(138, 55);
+            this.Sex_choose.Name = "Sex_choose";
+            this.Sex_choose.Size = new System.Drawing.Size(121, 20);
+            this.Sex_choose.TabIndex = 4;
+            // 
+            // Weight_Text
+            // 
+            this.Weight_Text.AutoSize = true;
+            this.Weight_Text.Location = new System.Drawing.Point(60, 180);
+            this.Weight_Text.Name = "Weight_Text";
+            this.Weight_Text.Size = new System.Drawing.Size(33, 12);
+            this.Weight_Text.TabIndex = 3;
+            this.Weight_Text.Text = "label4";
+            // 
+            // Height_Text
+            // 
+            this.Height_Text.AutoSize = true;
+            this.Height_Text.Location = new System.Drawing.Point(60, 140);
+            this.Height_Text.Name = "Height_Text";
+            this.Height_Text.Size = new System.Drawing.Size(33, 12);
+            this.Height_Text.TabIndex = 2;
+            this.Height_Text.Text = "label3";
+            // 
+            // Age_Text
+            // 
+            this.Age_Text.AutoSize = true;
+            this.Age_Text.Location = new System.Drawing.Point(60, 100);
+            this.Age_Text.Name = "Age_Text";
+            this.Age_Text.Size = new System.Drawing.Size(33, 12);
+            this.Age_Text.TabIndex = 1;
+            this.Age_Text.Text = "label2";
+            // 
+            // Bio_sex_Text
+            // 
+            this.Bio_sex_Text.AutoSize = true;
+            this.Bio_sex_Text.Location = new System.Drawing.Point(60, 60);
+            this.Bio_sex_Text.Name = "Bio_sex_Text";
+            this.Bio_sex_Text.Size = new System.Drawing.Size(33, 12);
+            this.Bio_sex_Text.TabIndex = 0;
+            this.Bio_sex_Text.Text = "label1";
+            // 
             // Username_invisible
             // 
             this.Username_invisible.AutoSize = true;
@@ -207,6 +212,16 @@
             this.Username_invisible.Size = new System.Drawing.Size(33, 12);
             this.Username_invisible.TabIndex = 6;
             this.Username_invisible.Text = "label1";
+            // 
+            // Confirm_button
+            // 
+            this.Confirm_button.Location = new System.Drawing.Point(288, 167);
+            this.Confirm_button.Name = "Confirm_button";
+            this.Confirm_button.Size = new System.Drawing.Size(75, 23);
+            this.Confirm_button.TabIndex = 10;
+            this.Confirm_button.Text = "button3";
+            this.Confirm_button.UseVisualStyleBackColor = true;
+            this.Confirm_button.Click += new System.EventHandler(this.Confirm_button_Click);
             // 
             // Form2
             // 
@@ -244,11 +259,12 @@
         private System.Windows.Forms.Label Age_Text;
         private System.Windows.Forms.Label Bio_sex_Text;
         private System.Windows.Forms.Button First_Time_Back_Button;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Weight_box;
+        private System.Windows.Forms.TextBox Height_box;
+        private System.Windows.Forms.TextBox Age_box;
+        private System.Windows.Forms.ComboBox Sex_choose;
         private System.Windows.Forms.Label First_Time_Text;
         public System.Windows.Forms.Label Username_invisible;
+        private System.Windows.Forms.Button Confirm_button;
     }
 }
