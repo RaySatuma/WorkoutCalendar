@@ -86,6 +86,7 @@ namespace finalProject
                     //Language_index = 0;
                     Language_Choose.Items.Clear();
                     Language_Choose.Items.AddRange(new object[] { "English", "Chinese", "Japanese" });
+                    Language_Choose.SelectedIndex = 0;
                 }   
             }
             else if (Language_Choose.SelectedIndex == 1)
@@ -98,6 +99,7 @@ namespace finalProject
                     //Language_index = 1;
                     Language_Choose.Items.Clear();
                     Language_Choose.Items.AddRange(new object[] { "英文", "中文", "日文" });
+                    Language_Choose.SelectedIndex = 1;
                 }
             }
             else if (Language_Choose.SelectedIndex == 2)
@@ -110,6 +112,7 @@ namespace finalProject
                     //Language_index = 2;
                     Language_Choose.Items.Clear();
                     Language_Choose.Items.AddRange(new object[] { "英語", "中国語", "日本語" });
+                    Language_Choose.SelectedIndex = 2;
                 }
             }
         }

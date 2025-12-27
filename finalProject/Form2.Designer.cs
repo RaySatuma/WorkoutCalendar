@@ -34,6 +34,10 @@
             this.Home_Language_Choose = new System.Windows.Forms.ComboBox();
             this.Home_Language_Text = new System.Windows.Forms.Label();
             this.First_time = new System.Windows.Forms.Panel();
+            this.Username_invisible = new System.Windows.Forms.Label();
+            this.Exercise_Level_Choose = new System.Windows.Forms.ComboBox();
+            this.Exercise_Level_Text = new System.Windows.Forms.Label();
+            this.Confirm_button = new System.Windows.Forms.Button();
             this.First_Time_Text = new System.Windows.Forms.Label();
             this.First_Time_Back_Button = new System.Windows.Forms.Button();
             this.Weight_box = new System.Windows.Forms.TextBox();
@@ -44,8 +48,7 @@
             this.Height_Text = new System.Windows.Forms.Label();
             this.Age_Text = new System.Windows.Forms.Label();
             this.Bio_sex_Text = new System.Windows.Forms.Label();
-            this.Username_invisible = new System.Windows.Forms.Label();
-            this.Confirm_button = new System.Windows.Forms.Button();
+            this.Basic_Cal_cunsumption_Text = new System.Windows.Forms.Label();
             this.First_time.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +102,9 @@
             // 
             // First_time
             // 
+            this.First_time.Controls.Add(this.Username_invisible);
+            this.First_time.Controls.Add(this.Exercise_Level_Choose);
+            this.First_time.Controls.Add(this.Exercise_Level_Text);
             this.First_time.Controls.Add(this.Confirm_button);
             this.First_time.Controls.Add(this.First_Time_Text);
             this.First_time.Controls.Add(this.First_Time_Back_Button);
@@ -110,20 +116,58 @@
             this.First_time.Controls.Add(this.Height_Text);
             this.First_time.Controls.Add(this.Age_Text);
             this.First_time.Controls.Add(this.Bio_sex_Text);
-            this.First_time.Location = new System.Drawing.Point(0, 0);
+            this.First_time.Location = new System.Drawing.Point(352, 217);
             this.First_time.Name = "First_time";
             this.First_time.Size = new System.Drawing.Size(369, 228);
             this.First_time.TabIndex = 5;
             // 
+            // Username_invisible
+            // 
+            this.Username_invisible.AutoSize = true;
+            this.Username_invisible.Location = new System.Drawing.Point(12, 7);
+            this.Username_invisible.Name = "Username_invisible";
+            this.Username_invisible.Size = new System.Drawing.Size(33, 12);
+            this.Username_invisible.TabIndex = 6;
+            this.Username_invisible.Text = "label1";
+            // 
+            // Exercise_Level_Choose
+            // 
+            this.Exercise_Level_Choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Exercise_Level_Choose.FormattingEnabled = true;
+            this.Exercise_Level_Choose.Location = new System.Drawing.Point(148, 188);
+            this.Exercise_Level_Choose.Name = "Exercise_Level_Choose";
+            this.Exercise_Level_Choose.Size = new System.Drawing.Size(121, 20);
+            this.Exercise_Level_Choose.TabIndex = 12;
+            // 
+            // Exercise_Level_Text
+            // 
+            this.Exercise_Level_Text.AutoSize = true;
+            this.Exercise_Level_Text.Location = new System.Drawing.Point(28, 191);
+            this.Exercise_Level_Text.Name = "Exercise_Level_Text";
+            this.Exercise_Level_Text.Size = new System.Drawing.Size(33, 12);
+            this.Exercise_Level_Text.TabIndex = 11;
+            this.Exercise_Level_Text.Text = "label4";
+            // 
+            // Confirm_button
+            // 
+            this.Confirm_button.Location = new System.Drawing.Point(288, 167);
+            this.Confirm_button.Name = "Confirm_button";
+            this.Confirm_button.Size = new System.Drawing.Size(75, 23);
+            this.Confirm_button.TabIndex = 10;
+            this.Confirm_button.Text = "button3";
+            this.Confirm_button.UseVisualStyleBackColor = true;
+            this.Confirm_button.Click += new System.EventHandler(this.Confirm_button_Click);
+            // 
             // First_Time_Text
             // 
-            this.First_Time_Text.AutoSize = true;
+            this.First_Time_Text.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.First_Time_Text.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.First_Time_Text.Location = new System.Drawing.Point(146, 12);
+            this.First_Time_Text.Location = new System.Drawing.Point(30, 9);
             this.First_Time_Text.Name = "First_Time_Text";
-            this.First_Time_Text.Size = new System.Drawing.Size(71, 27);
+            this.First_Time_Text.Size = new System.Drawing.Size(314, 27);
             this.First_Time_Text.TabIndex = 9;
             this.First_Time_Text.Text = "label1";
+            this.First_Time_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // First_Time_Back_Button
             // 
@@ -137,7 +181,7 @@
             // 
             // Weight_box
             // 
-            this.Weight_box.Location = new System.Drawing.Point(138, 175);
+            this.Weight_box.Location = new System.Drawing.Point(148, 154);
             this.Weight_box.Name = "Weight_box";
             this.Weight_box.Size = new System.Drawing.Size(121, 22);
             this.Weight_box.TabIndex = 7;
@@ -145,7 +189,7 @@
             // 
             // Height_box
             // 
-            this.Height_box.Location = new System.Drawing.Point(138, 134);
+            this.Height_box.Location = new System.Drawing.Point(148, 122);
             this.Height_box.Name = "Height_box";
             this.Height_box.Size = new System.Drawing.Size(121, 22);
             this.Height_box.TabIndex = 6;
@@ -153,7 +197,7 @@
             // 
             // Age_box
             // 
-            this.Age_box.Location = new System.Drawing.Point(138, 94);
+            this.Age_box.Location = new System.Drawing.Point(148, 88);
             this.Age_box.Name = "Age_box";
             this.Age_box.Size = new System.Drawing.Size(121, 22);
             this.Age_box.TabIndex = 5;
@@ -163,7 +207,7 @@
             // 
             this.Sex_choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Sex_choose.FormattingEnabled = true;
-            this.Sex_choose.Location = new System.Drawing.Point(138, 55);
+            this.Sex_choose.Location = new System.Drawing.Point(148, 55);
             this.Sex_choose.Name = "Sex_choose";
             this.Sex_choose.Size = new System.Drawing.Size(121, 20);
             this.Sex_choose.TabIndex = 4;
@@ -171,7 +215,7 @@
             // Weight_Text
             // 
             this.Weight_Text.AutoSize = true;
-            this.Weight_Text.Location = new System.Drawing.Point(60, 180);
+            this.Weight_Text.Location = new System.Drawing.Point(28, 159);
             this.Weight_Text.Name = "Weight_Text";
             this.Weight_Text.Size = new System.Drawing.Size(33, 12);
             this.Weight_Text.TabIndex = 3;
@@ -180,7 +224,7 @@
             // Height_Text
             // 
             this.Height_Text.AutoSize = true;
-            this.Height_Text.Location = new System.Drawing.Point(60, 140);
+            this.Height_Text.Location = new System.Drawing.Point(28, 128);
             this.Height_Text.Name = "Height_Text";
             this.Height_Text.Size = new System.Drawing.Size(33, 12);
             this.Height_Text.TabIndex = 2;
@@ -189,7 +233,7 @@
             // Age_Text
             // 
             this.Age_Text.AutoSize = true;
-            this.Age_Text.Location = new System.Drawing.Point(60, 100);
+            this.Age_Text.Location = new System.Drawing.Point(28, 94);
             this.Age_Text.Name = "Age_Text";
             this.Age_Text.Size = new System.Drawing.Size(33, 12);
             this.Age_Text.TabIndex = 1;
@@ -198,37 +242,29 @@
             // Bio_sex_Text
             // 
             this.Bio_sex_Text.AutoSize = true;
-            this.Bio_sex_Text.Location = new System.Drawing.Point(60, 60);
+            this.Bio_sex_Text.Location = new System.Drawing.Point(28, 60);
             this.Bio_sex_Text.Name = "Bio_sex_Text";
             this.Bio_sex_Text.Size = new System.Drawing.Size(33, 12);
             this.Bio_sex_Text.TabIndex = 0;
             this.Bio_sex_Text.Text = "label1";
             // 
-            // Username_invisible
+            // Basic_Cal_cunsumption_Text
             // 
-            this.Username_invisible.AutoSize = true;
-            this.Username_invisible.Location = new System.Drawing.Point(13, 201);
-            this.Username_invisible.Name = "Username_invisible";
-            this.Username_invisible.Size = new System.Drawing.Size(33, 12);
-            this.Username_invisible.TabIndex = 6;
-            this.Username_invisible.Text = "label1";
-            // 
-            // Confirm_button
-            // 
-            this.Confirm_button.Location = new System.Drawing.Point(288, 167);
-            this.Confirm_button.Name = "Confirm_button";
-            this.Confirm_button.Size = new System.Drawing.Size(75, 23);
-            this.Confirm_button.TabIndex = 10;
-            this.Confirm_button.Text = "button3";
-            this.Confirm_button.UseVisualStyleBackColor = true;
-            this.Confirm_button.Click += new System.EventHandler(this.Confirm_button_Click);
+            this.Basic_Cal_cunsumption_Text.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Basic_Cal_cunsumption_Text.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Basic_Cal_cunsumption_Text.Location = new System.Drawing.Point(108, 155);
+            this.Basic_Cal_cunsumption_Text.Name = "Basic_Cal_cunsumption_Text";
+            this.Basic_Cal_cunsumption_Text.Size = new System.Drawing.Size(142, 23);
+            this.Basic_Cal_cunsumption_Text.TabIndex = 6;
+            this.Basic_Cal_cunsumption_Text.Text = "label1";
+            this.Basic_Cal_cunsumption_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 225);
-            this.Controls.Add(this.Username_invisible);
+            this.Controls.Add(this.Basic_Cal_cunsumption_Text);
             this.Controls.Add(this.First_time);
             this.Controls.Add(this.Home_Language_Text);
             this.Controls.Add(this.Home_Language_Choose);
@@ -266,5 +302,8 @@
         private System.Windows.Forms.Label First_Time_Text;
         public System.Windows.Forms.Label Username_invisible;
         private System.Windows.Forms.Button Confirm_button;
+        private System.Windows.Forms.ComboBox Exercise_Level_Choose;
+        private System.Windows.Forms.Label Exercise_Level_Text;
+        private System.Windows.Forms.Label Basic_Cal_cunsumption_Text;
     }
 }
