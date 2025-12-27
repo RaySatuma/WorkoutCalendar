@@ -31,13 +31,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,17 +38,24 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lbMonth = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GoNextMonth = new System.Windows.Forms.PictureBox();
+            this.GoPreviousMonth = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoNextMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoPreviousMonth)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 1062);
+            this.button1.Location = new System.Drawing.Point(23, 1425);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 38);
@@ -66,7 +66,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1530, 1062);
+            this.button2.Location = new System.Drawing.Point(1434, 1425);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 38);
@@ -86,82 +86,8 @@
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(22, 190);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1655, 861);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1655, 1228);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.AliceBlue;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(74, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Sunday";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F);
-            this.label2.Location = new System.Drawing.Point(297, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 36);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Monday";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F);
-            this.label3.Location = new System.Drawing.Point(748, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 36);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Wednesday";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F);
-            this.label4.Location = new System.Drawing.Point(527, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 36);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Tuesday";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F);
-            this.label5.Location = new System.Drawing.Point(1481, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 36);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Saturday";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F);
-            this.label6.Location = new System.Drawing.Point(1258, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 36);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Frisday";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F);
-            this.label7.Location = new System.Drawing.Point(1002, 140);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 36);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Thursday";
             // 
             // panel1
             // 
@@ -219,45 +145,121 @@
             this.panel7.Size = new System.Drawing.Size(236, 196);
             this.panel7.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(74, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Sunday";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F);
+            this.label2.Location = new System.Drawing.Point(284, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 36);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Monday";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F);
+            this.label3.Location = new System.Drawing.Point(704, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 36);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Wednesday";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F);
+            this.label4.Location = new System.Drawing.Point(511, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 36);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Tuesday";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F);
+            this.label5.Location = new System.Drawing.Point(1393, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 36);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Saturday";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F);
+            this.label6.Location = new System.Drawing.Point(1190, 140);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 36);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Frisday";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F);
+            this.label7.Location = new System.Drawing.Point(952, 140);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 36);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Thursday";
+            // 
             // lbMonth
             // 
             this.lbMonth.AllowDrop = true;
             this.lbMonth.Font = new System.Drawing.Font("Arial", 16F);
             this.lbMonth.Location = new System.Drawing.Point(71, 44);
             this.lbMonth.Name = "lbMonth";
-            this.lbMonth.Size = new System.Drawing.Size(313, 44);
+            this.lbMonth.Size = new System.Drawing.Size(550, 44);
             this.lbMonth.TabIndex = 10;
             this.lbMonth.Text = "Month";
             this.lbMonth.Click += new System.EventHandler(this.label8_Click);
             // 
-            // pictureBox2
+            // GoNextMonth
             // 
-            this.pictureBox2.Image = global::finalProject.Properties.Resources.blue_arrow_right;
-            this.pictureBox2.Location = new System.Drawing.Point(482, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.GoNextMonth.Image = global::finalProject.Properties.Resources.blue_arrow_right;
+            this.GoNextMonth.Location = new System.Drawing.Point(720, 44);
+            this.GoNextMonth.Name = "GoNextMonth";
+            this.GoNextMonth.Size = new System.Drawing.Size(100, 50);
+            this.GoNextMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GoNextMonth.TabIndex = 12;
+            this.GoNextMonth.TabStop = false;
+            this.GoNextMonth.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // GoPreviousMonth
             // 
-            this.pictureBox1.Image = global::finalProject.Properties.Resources.blue_arrow_left;
-            this.pictureBox1.Location = new System.Drawing.Point(390, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.GoPreviousMonth.Image = global::finalProject.Properties.Resources.blue_arrow_left;
+            this.GoPreviousMonth.Location = new System.Drawing.Point(627, 44);
+            this.GoPreviousMonth.Name = "GoPreviousMonth";
+            this.GoPreviousMonth.Size = new System.Drawing.Size(100, 50);
+            this.GoPreviousMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GoPreviousMonth.TabIndex = 11;
+            this.GoPreviousMonth.TabStop = false;
+            this.GoPreviousMonth.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1699, 1122);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1699, 1476);
+            this.Controls.Add(this.GoNextMonth);
+            this.Controls.Add(this.GoPreviousMonth);
             this.Controls.Add(this.lbMonth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -274,8 +276,8 @@
             this.Text = "Calendar";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoNextMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoPreviousMonth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,14 +296,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbMonth;
+        private System.Windows.Forms.PictureBox GoPreviousMonth;
+        private System.Windows.Forms.PictureBox GoNextMonth;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label lbMonth;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
