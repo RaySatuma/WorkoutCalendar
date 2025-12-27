@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -229,7 +230,7 @@
             // 
             // GoNextMonth
             // 
-            this.GoNextMonth.Image = global::finalProject.Properties.Resources.blue_arrow_right;
+            this.GoNextMonth.Image = ((System.Drawing.Image)(resources.GetObject("GoNextMonth.Image")));
             this.GoNextMonth.Location = new System.Drawing.Point(720, 44);
             this.GoNextMonth.Name = "GoNextMonth";
             this.GoNextMonth.Size = new System.Drawing.Size(100, 50);
@@ -240,7 +241,7 @@
             // 
             // GoPreviousMonth
             // 
-            this.GoPreviousMonth.Image = global::finalProject.Properties.Resources.blue_arrow_left;
+            this.GoPreviousMonth.Image = ((System.Drawing.Image)(resources.GetObject("GoPreviousMonth.Image")));
             this.GoPreviousMonth.Location = new System.Drawing.Point(627, 44);
             this.GoPreviousMonth.Name = "GoPreviousMonth";
             this.GoPreviousMonth.Size = new System.Drawing.Size(100, 50);

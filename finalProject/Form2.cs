@@ -196,6 +196,8 @@ namespace finalProject
             {
                 Basic_Cal_cunsumption_Text.Text = Daily_Calorie_Cunsumption.ToString() + " キロカロリー";
             }
+
+            
         }
 
         private void Age_box_TextChanged(object sender, EventArgs e)

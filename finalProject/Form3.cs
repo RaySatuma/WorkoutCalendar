@@ -39,7 +39,11 @@ namespace finalProject
         }
 
         private void Form3_Load(object sender, EventArgs e)
+
         {
+            GoPreviousMonth.Visible = true;
+            GoNextMonth.Visible = true;
+
             showDays(DateTime.Now.Month, DateTime.Now.Year);
 
         }
