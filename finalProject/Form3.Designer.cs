@@ -156,7 +156,6 @@
             this.label1.Size = new System.Drawing.Size(121, 36);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sunday";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -167,7 +166,6 @@
             this.label2.Size = new System.Drawing.Size(126, 36);
             this.label2.TabIndex = 4;
             this.label2.Text = "Monday";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -178,7 +176,6 @@
             this.label3.Size = new System.Drawing.Size(180, 36);
             this.label3.TabIndex = 6;
             this.label3.Text = "Wednesday";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -229,7 +226,6 @@
             this.lbMonth.Size = new System.Drawing.Size(550, 44);
             this.lbMonth.TabIndex = 10;
             this.lbMonth.Text = "Month";
-            this.lbMonth.Click += new System.EventHandler(this.label8_Click);
             // 
             // GoNextMonth
             // 
@@ -240,7 +236,7 @@
             this.GoNextMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GoNextMonth.TabIndex = 12;
             this.GoNextMonth.TabStop = false;
-            this.GoNextMonth.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.GoNextMonth.Click += new System.EventHandler(this.GoToNextMonthBtn_Click);
             // 
             // GoPreviousMonth
             // 
@@ -251,7 +247,7 @@
             this.GoPreviousMonth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GoPreviousMonth.TabIndex = 11;
             this.GoPreviousMonth.TabStop = false;
-            this.GoPreviousMonth.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.GoPreviousMonth.Click += new System.EventHandler(this.GoToPreviouMonthBtn_Click);
             // 
             // Form3
             // 

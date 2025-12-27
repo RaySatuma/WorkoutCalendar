@@ -44,39 +44,14 @@ namespace finalProject
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tblCal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
+       
         
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+       
+        
+
+        private void GoToPreviouMonthBtn_Click(object sender, EventArgs e)
         {
             _month -= 1;
             if(_month < 1)
@@ -86,7 +61,9 @@ namespace finalProject
             }
             showDays(_month, _year);
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+        
+        private void GoToNextMonthBtn_Click(object sender, EventArgs e)
         {
             _month += 1;
             if (_month > 12)
@@ -95,11 +72,6 @@ namespace finalProject
                 _year += 1;
             }
             showDays(_month, _year);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void showDays(int month, int year)
