@@ -26,3 +26,4 @@ C:\Users\ryo\source\repos\finalProject\finalProject\obj\Debug\finalProject.cspro
 C:\Users\ryo\source\repos\finalProject\finalProject\obj\Debug\finalProject.csproj.CoreCompileInputs.cache
 C:\Users\ryo\source\repos\finalProject\finalProject\obj\Debug\finalProject.exe
 C:\Users\ryo\source\repos\finalProject\finalProject\obj\Debug\finalProject.pdb
+C:\Users\user\Desktop\課本\視窗程式設計\期末project\WorkoutCalendar-main\finalProject\obj\Debug\finalProject.ucDay.resources
