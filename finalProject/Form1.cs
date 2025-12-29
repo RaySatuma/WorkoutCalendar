@@ -42,7 +42,7 @@ namespace finalProject
             {
                 UserName_Text.Text = "ユーザー名";//Translated by GitHub Copilot
                 Language_text.Text = "言語";
-                Start_Button.Text = "使い始める";
+                Start_Button.Text = "スタート";
                 Language_Choose.Items.Clear();
                 Language_Choose.Items.AddRange(new object[] { "英語", "中国語", "日本語" });
                 Language_Choose.SelectedIndex = 2;
