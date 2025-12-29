@@ -116,7 +116,7 @@
             this.First_time.Controls.Add(this.Height_Text);
             this.First_time.Controls.Add(this.Age_Text);
             this.First_time.Controls.Add(this.Bio_sex_Text);
-            this.First_time.Location = new System.Drawing.Point(352, 217);
+            this.First_time.Location = new System.Drawing.Point(0, 0);
             this.First_time.Name = "First_time";
             this.First_time.Size = new System.Drawing.Size(369, 228);
             this.First_time.TabIndex = 5;
@@ -138,6 +138,8 @@
             this.Exercise_Level_Choose.Name = "Exercise_Level_Choose";
             this.Exercise_Level_Choose.Size = new System.Drawing.Size(121, 20);
             this.Exercise_Level_Choose.TabIndex = 12;
+            this.Exercise_Level_Choose.DropDown += new System.EventHandler(this.Exercise_Level_Choose_DropDown);
+            this.Exercise_Level_Choose.DropDownClosed += new System.EventHandler(this.Exercise_Level_Choose_DropDownClosed);
             // 
             // Exercise_Level_Text
             // 
@@ -264,13 +266,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 225);
-            this.Controls.Add(this.Basic_Cal_cunsumption_Text);
             this.Controls.Add(this.First_time);
             this.Controls.Add(this.Home_Language_Text);
             this.Controls.Add(this.Home_Language_Choose);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.Basic_Cal_cunsumption_Text);
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.Name = "Form2";
             this.Text = "Home";

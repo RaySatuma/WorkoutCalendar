@@ -56,6 +56,7 @@ namespace finalProject
             Home_Page.Home_Language_Text.Text = Language_text.Text;
             Home_Page.Username_invisible.Text = UserName_Text.Text;
             //從儲存文件讀取使用者名稱，如果有的話就直接進入主畫面；如果沒有就進入First_Time的畫面
+            
             Home_Page.ShowDialog();
             Language_Check(Home_Page.Home_Language_Text.Text);
             this.Show();
