@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace finalProject
 {
+   
     public partial class Form2 : Form
     {
+        private bool _isLanguageSelected = false;
         public Form2()
         {
             InitializeComponent();
@@ -40,6 +42,12 @@ namespace finalProject
 
         private void F2Language_Setup()
         {
+            _isLanguageSelected = true;
+
+            Home_Language_Choose.Items.Clear();
+            Sex_choose.Items.Clear();
+            Exercise_Level_Choose.Items.Clear();
+
             if (Home_Language_Text.Text == "Language")
             {
                 Home_Language_Choose.Items.AddRange(new object[] { "English", "Chinese", "Japanese" });
@@ -54,7 +62,13 @@ namespace finalProject
                 Confirm_button.Text = "Confirm";
                 First_Time_Back_Button.Text = "Back";
                 Exercise_Level_Text.Text = "Weekly Activity Level";
-                Exercise_Level_Choose.Items.AddRange(new object[] { "Sedentary\n(No extra exercise)", "Lightly active\n(exercise 1~3 times per week)", "Moderately active\n(exercise 4~5 times per week)", "Very active\n(exercise 6~7 times per week)", "Extra active\n(Intense daily exercise / physical labor)" });
+                Exercise_Level_Choose.Items.AddRange(new object[] {
+            "Sedentary\n(No extra exercise)",
+            "Lightly active\n(exercise 1~3 times per week)",
+            "Moderately active\n(exercise 4~5 times per week)",
+            "Very active\n(exercise 6~7 times per week)",
+            "Extra active\n(Intense daily exercise / physical labor)"
+        });
             }
             else if (Home_Language_Text.Text == "語言")
             {
@@ -70,14 +84,20 @@ namespace finalProject
                 Confirm_button.Text = "確認";
                 First_Time_Back_Button.Text = "返回";
                 Exercise_Level_Text.Text = "每周活動量";
-                Exercise_Level_Choose.Items.AddRange(new object[] { "久坐不動\n(幾乎不動)", "輕度活動\n(每週運動1~3天)", "中度活動\n(每週運動4~5天)", "高度活動\n(每週運動6~7天)", "超級活躍\n(每天激烈運動/體力勞動)" });
+                Exercise_Level_Choose.Items.AddRange(new object[] {
+            "久坐不動\n(幾乎不動)",
+            "輕度活動\n(每週運動1~3天)",
+            "中度活動\n(每週運動4~5天)",
+            "高度活動\n(每週運動6~7天)",
+            "超級活躍\n(每天激烈運動/體力勞動)"
+        });
             }
             else if (Home_Language_Text.Text == "言語")
             {
                 Home_Language_Choose.Items.AddRange(new object[] { "英語", "中国語", "日本語" });
                 Home_Language_Choose.SelectedIndex = 2;
 
-                First_Time_Text.Text = "あなたの個人データを入力してください！";//(GitHub Copilot translation )
+                First_Time_Text.Text = "あなたの個人データを入力してください！";
                 Sex_choose.Items.AddRange(new object[] { "生物学的性別", "男性", "女性" });
                 Bio_sex_Text.Text = "生物学的性別";
                 Age_Text.Text = "年齢";
@@ -86,8 +106,16 @@ namespace finalProject
                 Confirm_button.Text = "確認する";
                 First_Time_Back_Button.Text = "戻る";
                 Exercise_Level_Text.Text = "週間活動レベル";
-                Exercise_Level_Choose.Items.AddRange(new object[] { "座りがち\n(ほとんど運動しない)", "軽度に活動的\n(週に1〜3回運動する)", "適度に活動的\n(週に4〜5回運動する)", "非常に活動的\n(週に6〜7回運動する)", "非常に活発\n(毎日激しい運動/肉体労働)" });
+                Exercise_Level_Choose.Items.AddRange(new object[] {
+            "座りがち\n(ほとんど運動しない)",
+             "軽度に活動的\n(週に1〜3回運動する)",
+            "適度に活動的\n(週に4〜5回運動する)",
+            "非常に活動的\n(週に6〜7回運動する)",
+            "非常に活発\n(毎日激しい運動/肉体労働)"
+        });
             }
+
+            _isLanguageSelected = false; 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,13 +153,13 @@ namespace finalProject
         }
         private void Home_Language_Choose_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (_isLanguageSelected) return;
             if (Home_Language_Choose.SelectedIndex == 0)
             {
                 if (Home_Language_Text.Text != "Language")
                 {
                     Home_Language_Text.Text = "Language";
-                    Home_Language_Choose.Items.Clear();
-                    Home_Language_Choose.Items.AddRange(new object[] { "English", "Chinese", "Japanese" });
                 }
             }
             else if (Home_Language_Choose.SelectedIndex == 1)
@@ -139,8 +167,6 @@ namespace finalProject
                 if (Home_Language_Text.Text != "語言")
                 {
                     Home_Language_Text.Text = "語言";
-                    Home_Language_Choose.Items.Clear();
-                    Home_Language_Choose.Items.AddRange(new object[] { "英文", "中文", "日文" });
                 }
             }
             else if (Home_Language_Choose.SelectedIndex == 2)
@@ -148,8 +174,6 @@ namespace finalProject
                 if (Home_Language_Text.Text != "言語")
                 {
                     Home_Language_Text.Text = "言語";
-                    Home_Language_Choose.Items.Clear();
-                    Home_Language_Choose.Items.AddRange(new object[] { "英語", "中国語", "日本語" });
                 }
             }
             F2Language_Setup();
@@ -262,5 +286,17 @@ namespace finalProject
             }
             Weight_temp = float.Parse(Weight_box.Text);
         }
+
+        private void Exercise_Level_Choose_DropDown(object sender, EventArgs e)
+        {
+            // 何もしなくてOK
+        }
+
+        private void Exercise_Level_Choose_DropDownClosed(object sender, EventArgs e)
+        {
+            // 何もしなくてOK
+        }
+
     }
+
 }
