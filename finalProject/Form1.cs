@@ -53,24 +53,28 @@ namespace finalProject
         {
             Form2 Home_Page = new Form2();
             this.Hide();
+
+            AppStorage.SaveProfile(Username_Box.Text, Language_text.Text);
             Home_Page.Home_Language_Text.Text = Language_text.Text;
-            Home_Page.Username_invisible.Text = UserName_Text.Text;
+            Home_Page.Username_invisible.Text = Username_Box.Text;
             //從儲存文件讀取使用者名稱，如果有的話就直接進入主畫面；如果沒有就進入First_Time的畫面
             
             Home_Page.ShowDialog();
             Language_Check(Home_Page.Home_Language_Text.Text);
             this.Show();
+            AppStorage.SaveProfile(Username_Box.Text, Language_text.Text);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UserName_Text.Text = "Username";
+            var (name, lang, sex, age, h, w, ex) = AppStorage.Load();
 
-            Language_Choose.Items.AddRange(new object[] { "English", "Chinese", "Japanese" });
-            Language_Choose.SelectedIndex = 0;
+            Language_Check(lang); 
+
+            
+            Username_Box.Text = name ?? "";
+
             Language_Choose.DropDownStyle = ComboBoxStyle.DropDownList;
-            Language_text.Text = "Language";
-            UserName_Text.Text = "Username";
         }
 
         private void Languaue_Choose_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,13 +113,14 @@ namespace finalProject
                 {
                     UserName_Text.Text = "ユーザー名";//Translated by GitHub Copilot
                     Language_text.Text = "言語";
-                    Start_Button.Text = "使い始める";
+                    Start_Button.Text = "スタート";
                     //Language_index = 2;
                     Language_Choose.Items.Clear();
                     Language_Choose.Items.AddRange(new object[] { "英語", "中国語", "日本語" });
                     Language_Choose.SelectedIndex = 2;
                 }
             }
+            AppStorage.SaveProfile(Username_Box.Text, Language_text.Text);
         }
     }
 }

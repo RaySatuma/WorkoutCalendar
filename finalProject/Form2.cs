@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.Globalization;
 using System.Linq;
 using System.Security.Permissions;
 using System.Text;
@@ -132,11 +134,25 @@ namespace finalProject
             Home_Language_Choose.DropDownStyle = ComboBoxStyle.DropDownList;
             Username_invisible.Visible = false;
 
+            var (name, lang, sex, age, h, w, ex) = AppStorage.Load();
+
+            Home_Language_Text.Text = lang;
+
             First_time.Location = new Point(0, 0);
             First_time.Show();
 
             F2Language_Setup();
+
+            
+            Age_box.Text = age == 0 ? "" : age.ToString();
+            Height_box.Text = h == 0 ? "" : h.ToString(CultureInfo.InvariantCulture);
+            Weight_box.Text = w == 0 ? "" : w.ToString(CultureInfo.InvariantCulture);
+
+            if (sex >= 0 && sex < Sex_choose.Items.Count) Sex_choose.SelectedIndex = sex;
+            if (ex >= 0 && ex < Exercise_Level_Choose.Items.Count) Exercise_Level_Choose.SelectedIndex = ex;
         }
+
+
 
         private void Daily_Calorie()
         {
@@ -221,7 +237,9 @@ namespace finalProject
                 Basic_Cal_cunsumption_Text.Text = Daily_Calorie_Cunsumption.ToString() + " キロカロリー";
             }
 
-            
+            AppStorage.SaveBody(Sex, Age, height, weight, Exercise_Level);
+            AppStorage.SaveProfile(Username_invisible.Text, Home_Language_Text.Text);
+
         }
 
         private void Age_box_TextChanged(object sender, EventArgs e)
