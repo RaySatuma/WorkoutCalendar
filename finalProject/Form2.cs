@@ -239,6 +239,7 @@ namespace finalProject
 
             AppStorage.SaveBody(Sex, Age, height, weight, Exercise_Level);
             AppStorage.SaveProfile(Username_invisible.Text, Home_Language_Text.Text);
+            button1_Click(sender,  e);
 
         }
 
