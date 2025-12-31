@@ -33,14 +33,15 @@
             this.Exercise_Type_Choose = new System.Windows.Forms.ComboBox();
             this.Exercise_Time_Text = new System.Windows.Forms.Label();
             this.Exercise_Type_Text = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // F4_Back_Button
             // 
-            this.F4_Back_Button.Location = new System.Drawing.Point(136, 155);
-            this.F4_Back_Button.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.F4_Back_Button.Location = new System.Drawing.Point(283, 726);
+            this.F4_Back_Button.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.F4_Back_Button.Name = "F4_Back_Button";
-            this.F4_Back_Button.Size = new System.Drawing.Size(88, 26);
+            this.F4_Back_Button.Size = new System.Drawing.Size(191, 52);
             this.F4_Back_Button.TabIndex = 0;
             this.F4_Back_Button.Text = "Back";
             this.F4_Back_Button.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // Exercise_Time_box
             // 
-            this.Exercise_Time_box.Location = new System.Drawing.Point(165, 102);
+            this.Exercise_Time_box.Location = new System.Drawing.Point(358, 204);
+            this.Exercise_Time_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Exercise_Time_box.Name = "Exercise_Time_box";
-            this.Exercise_Time_box.Size = new System.Drawing.Size(154, 22);
+            this.Exercise_Time_box.Size = new System.Drawing.Size(329, 31);
             this.Exercise_Time_box.TabIndex = 13;
             this.Exercise_Time_box.TextChanged += new System.EventHandler(this.Exercise_Time_box_TextChanged);
             // 
@@ -58,40 +60,52 @@
             // 
             this.Exercise_Type_Choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Exercise_Type_Choose.FormattingEnabled = true;
-            this.Exercise_Type_Choose.Location = new System.Drawing.Point(165, 69);
+            this.Exercise_Type_Choose.Location = new System.Drawing.Point(358, 138);
+            this.Exercise_Type_Choose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Exercise_Type_Choose.Name = "Exercise_Type_Choose";
-            this.Exercise_Type_Choose.Size = new System.Drawing.Size(154, 20);
+            this.Exercise_Type_Choose.Size = new System.Drawing.Size(329, 32);
             this.Exercise_Type_Choose.TabIndex = 12;
             // 
             // Exercise_Time_Text
             // 
             this.Exercise_Time_Text.AutoSize = true;
-            this.Exercise_Time_Text.Location = new System.Drawing.Point(45, 108);
+            this.Exercise_Time_Text.Location = new System.Drawing.Point(98, 216);
+            this.Exercise_Time_Text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Exercise_Time_Text.Name = "Exercise_Time_Text";
-            this.Exercise_Time_Text.Size = new System.Drawing.Size(33, 12);
+            this.Exercise_Time_Text.Size = new System.Drawing.Size(67, 24);
             this.Exercise_Time_Text.TabIndex = 11;
             this.Exercise_Time_Text.Text = "label2";
             // 
             // Exercise_Type_Text
             // 
             this.Exercise_Type_Text.AutoSize = true;
-            this.Exercise_Type_Text.Location = new System.Drawing.Point(45, 74);
+            this.Exercise_Type_Text.Location = new System.Drawing.Point(98, 148);
+            this.Exercise_Type_Text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Exercise_Type_Text.Name = "Exercise_Type_Text";
-            this.Exercise_Type_Text.Size = new System.Drawing.Size(33, 12);
+            this.Exercise_Type_Text.Size = new System.Drawing.Size(67, 24);
             this.Exercise_Type_Text.TabIndex = 10;
             this.Exercise_Type_Text.Text = "label1";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(117, 307);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(570, 373);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
+            // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 225);
+            this.ClientSize = new System.Drawing.Size(800, 802);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Exercise_Time_box);
             this.Controls.Add(this.Exercise_Type_Choose);
             this.Controls.Add(this.Exercise_Time_Text);
             this.Controls.Add(this.Exercise_Type_Text);
             this.Controls.Add(this.F4_Back_Button);
-            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Form4";
             this.Text = "Record";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -107,5 +121,6 @@
         private System.Windows.Forms.ComboBox Exercise_Type_Choose;
         private System.Windows.Forms.Label Exercise_Time_Text;
         private System.Windows.Forms.Label Exercise_Type_Text;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

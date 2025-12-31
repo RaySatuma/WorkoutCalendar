@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,8 @@ namespace finalProject
             }
             cal_from_F2 = cal_from_F2 + (int)Exercise_Calorie;
             //this.Close();
+            SaveMemo();
+            this.Close();
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -114,6 +117,10 @@ namespace finalProject
             }
             this.Text = $"Record - {SelectedDate:yyyy-MM-dd}";
             //this.Close();
+            if (File.Exists(MemoPath()))
+            {
+                richTextBox1.Text = File.ReadAllText(MemoPath());
+            }
         }
 
         private void F4_Confirm_Button_Click(object sender, EventArgs e)
@@ -145,5 +152,28 @@ namespace finalProject
             }
             
         }
+
+        private string MemoPath()
+        {
+            var dir = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "finalProject",
+                "memos"
+            );
+            Directory.CreateDirectory(dir);
+            return Path.Combine(dir, $"{SelectedDate:yyyy-MM-dd}.txt");
+        }
+
+        private void SaveMemo()
+        {
+            File.WriteAllText(MemoPath(), richTextBox1.Text ?? "");
+        }
+
+        private void F4_Back_Button_Click(object sender, EventArgs e)
+        {
+            SaveMemo();
+            this.Close();
+        }
+
     }
 }
