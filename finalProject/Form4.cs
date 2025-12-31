@@ -166,13 +166,39 @@ namespace finalProject
 
         private void SaveMemo()
         {
-            File.WriteAllText(MemoPath(), richTextBox1.Text ?? "");
+            var path = MemoPath();
+
+
+            if (IsAllEmpty())
+
+            {
+                if (File.Exists(path))
+                    File.Delete(path);
+                return;
+            }
+
+           
+            File.WriteAllText(path, richTextBox1.Text ?? "");
         }
 
         private void F4_Back_Button_Click(object sender, EventArgs e)
         {
             SaveMemo();
             this.Close();
+        }
+
+        private bool IsAllEmpty()
+        {
+           
+            bool memoEmpty = string.IsNullOrWhiteSpace(richTextBox1.Text);
+
+            bool timeEmpty = string.IsNullOrWhiteSpace(Exercise_Time_box.Text);
+            bool typeEmpty = (Exercise_Type_Choose.SelectedIndex < 0);
+
+            
+                                                                         
+
+            return memoEmpty && timeEmpty && typeEmpty;
         }
 
     }
