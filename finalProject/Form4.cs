@@ -13,6 +13,7 @@ namespace finalProject
 {
     public partial class Form4 : Form
     {
+        public DateTime SelectedDate;
         public Form4()
         {
             InitializeComponent();
@@ -111,7 +112,7 @@ namespace finalProject
                 F4_Back_Button.Text = "戻る";
                 
             }
-            
+            this.Text = $"Record - {SelectedDate:yyyy-MM-dd}";
             //this.Close();
         }
 
