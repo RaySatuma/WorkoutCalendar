@@ -28,9 +28,17 @@ namespace finalProject
             label1.Text = day;
             date = Form3._month + "/" + _day + "/" + Form3._year;
            SturdaysAndSundays();
+            
+            label1.Click += ClickDay;
+            panel1.Click += ClickDay;
+        
         }
 
-
+        private void ClickDay(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(_day)) return;
+            base.OnClick(e);
+                }
 
         private void SturdaysAndSundays()
         {

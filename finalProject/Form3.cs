@@ -109,9 +109,32 @@ namespace finalProject
             for (int i = 1; i <= day; i++)
             {
                 ucDay uc = new ucDay(i + "");
+
+                var date = new DateTime(year, month, i);
+
+                uc.Click += (s, e) =>
+                {
+                    using (var form4 = new Form4())
+                    {
+                        form4.cal_from_F2 = Cal_temp;
+                        form4.F4_Language = Language_temp;
+                        form4.F4_User_Weight = Weight_temp;
+
+                        form4.SelectedDate = date;
+
+                        this.Hide();
+                        form4.ShowDialog();
+                        this.Show();
+
+                        // Form4で更新された値を戻す（必要なら）
+                        Cal_temp = form4.cal_from_F2;
+                    }
+                };
+
                 flowLayoutPanel1.Controls.Add(uc);
             }
-        } 
+
+        }
 
     }
 }
