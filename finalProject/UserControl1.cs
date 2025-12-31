@@ -15,14 +15,20 @@ namespace finalProject
 
     {
         string _day, date, weekday;
+        private bool _hasMemo;
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
+        public ucDay(string day, bool hasMemo) : this(day)
+        {
+            SetHasMemo(hasMemo);  
+        }
         public ucDay(string day)
         {
+
             InitializeComponent();
             _day = day;
             label1.Text = day;
@@ -67,5 +73,28 @@ namespace finalProject
         {
 
         }
+
+
+        public void SetHasMemo(bool hasMemo)
+        {
+            _hasMemo = hasMemo;
+            ApplyMemoStyle();
+        }
+
+        private void ApplyMemoStyle()
+        {
+            if (_hasMemo)
+            {
+                panel1.BackColor = Color.LemonChiffon; // 好きな色に変更OK
+                                                       // 例：枠を強調したいなら BorderStyle も
+                panel1.BorderStyle = BorderStyle.FixedSingle;
+            }
+            else
+            {
+                panel1.BackColor = Color.White;
+                panel1.BorderStyle = BorderStyle.None;
+            }
+        }
+
     }
 }

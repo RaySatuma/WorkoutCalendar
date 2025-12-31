@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,9 +109,12 @@ namespace finalProject
             }
             for (int i = 1; i <= day; i++)
             {
-                ucDay uc = new ucDay(i + "");
+                
 
                 var date = new DateTime(year, month, i);
+
+                bool hasMemo = HasMemo(date);            
+                ucDay uc = new ucDay(i.ToString(), hasMemo); 
 
                 uc.Click += (s, e) =>
                 {
@@ -126,15 +130,48 @@ namespace finalProject
                         form4.ShowDialog();
                         this.Show();
 
-                        // Form4で更新された値を戻す（必要なら）
+                       
                         Cal_temp = form4.cal_from_F2;
                     }
+
+                    uc.SetHasMemo(HasMemo(date));
                 };
 
                 flowLayoutPanel1.Controls.Add(uc);
             }
 
         }
+        private string GetMemoPath(DateTime date)
+        {
+            var dir = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "finalProject",
+                "memos"
+            );
+            Directory.CreateDirectory(dir);
+            return Path.Combine(dir, $"{date:yyyy-MM-dd}.txt");
+        }
+
+
+        private string MemoPath(DateTime d)
+        {
+            var dir = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "finalProject",
+                "memos"
+            );
+            return Path.Combine(dir, $"{d:yyyy-MM-dd}.txt");
+        }
+
+        private bool HasMemo(DateTime d)
+        {
+            var path = MemoPath(d);
+            if (!File.Exists(path)) return false;
+
+            return !string.IsNullOrWhiteSpace(File.ReadAllText(path));
+        }
+
+
 
     }
 }
