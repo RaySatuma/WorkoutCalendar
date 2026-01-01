@@ -15,6 +15,7 @@ namespace finalProject
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         //int Language_index = 0;
 
