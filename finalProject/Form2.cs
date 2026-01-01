@@ -20,6 +20,7 @@ namespace finalProject
         public Form2()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         //int Language_index = 0;
         private void button2_Click(object sender, EventArgs e)
@@ -366,12 +367,12 @@ namespace finalProject
 
         private void Exercise_Level_Choose_DropDown(object sender, EventArgs e)
         {
-            // 何もしなくてOK
+            
         }
 
         private void Exercise_Level_Choose_DropDownClosed(object sender, EventArgs e)
         {
-            // 何もしなくてOK
+          
         }
 
     }

@@ -51,7 +51,7 @@
             // Exercise_Time_box
             // 
             this.Exercise_Time_box.Location = new System.Drawing.Point(358, 204);
-            this.Exercise_Time_box.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Exercise_Time_box.Margin = new System.Windows.Forms.Padding(6);
             this.Exercise_Time_box.Name = "Exercise_Time_box";
             this.Exercise_Time_box.Size = new System.Drawing.Size(329, 31);
             this.Exercise_Time_box.TabIndex = 13;
@@ -62,7 +62,7 @@
             this.Exercise_Type_Choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Exercise_Type_Choose.FormattingEnabled = true;
             this.Exercise_Type_Choose.Location = new System.Drawing.Point(358, 138);
-            this.Exercise_Type_Choose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Exercise_Type_Choose.Margin = new System.Windows.Forms.Padding(6);
             this.Exercise_Type_Choose.Name = "Exercise_Type_Choose";
             this.Exercise_Type_Choose.Size = new System.Drawing.Size(329, 32);
             this.Exercise_Type_Choose.TabIndex = 12;
@@ -97,7 +97,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(713, 768);
+            this.button1.Location = new System.Drawing.Point(757, 813);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 802);
+            this.ClientSize = new System.Drawing.Size(792, 788);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Exercise_Time_box);

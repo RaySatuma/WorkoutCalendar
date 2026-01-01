@@ -90,14 +90,14 @@ namespace finalProject
         {
             Exercise_Type_Choose.Items.Clear();
             Exercise_Time_Text.Text = "";
-            
+
             if (F4_Language == "Language")
             {
                 Exercise_Type_Choose.Items.AddRange(new object[] { "Walking (4 km/h)", "Brisk walking (6 km/h)", "Going downstairs", "Going upstairs", "Jogging (8 km/h)", "Running (16 km/h)", "Cycling (20 km/h)", "Yoga", "Swimming (25 meters/60 seconds)", "Tennis" });
                 Exercise_Type_Text.Text = "Exercise Type";
                 Exercise_Time_Text.Text = "Exercise Duration(min)";
                 F4_Back_Button.Text = "Back";
-                
+
             }
             else if (F4_Language == "語言")
             {
@@ -105,7 +105,7 @@ namespace finalProject
                 Exercise_Type_Text.Text = "運動類型";
                 Exercise_Time_Text.Text = "運動時長(分)";
                 F4_Back_Button.Text = "返回";
-                
+
             }
             else if (F4_Language == "言語")
             {
@@ -113,7 +113,7 @@ namespace finalProject
                 Exercise_Type_Text.Text = "運動の種類";
                 Exercise_Time_Text.Text = "運動時間(分)";
                 F4_Back_Button.Text = "戻る";
-                
+
             }
             this.Text = $"Record - {SelectedDate:yyyy-MM-dd}";
             //this.Close();
@@ -125,12 +125,12 @@ namespace finalProject
 
         private void F4_Confirm_Button_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Exercise_Time_box_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(Exercise_Time_box.Text, out Exe_temp) == false && Exercise_Time_box.Text !="")
+            if (int.TryParse(Exercise_Time_box.Text, out Exe_temp) == false && Exercise_Time_box.Text != "")
             {
                 if (F4_Language == "Language")
                 {
@@ -150,7 +150,7 @@ namespace finalProject
             {
                 Exercise_Time = int.Parse(Exercise_Time_box.Text);
             }
-            
+
         }
 
         private string MemoPath()
@@ -177,7 +177,7 @@ namespace finalProject
                 return;
             }
 
-           
+
             File.WriteAllText(path, richTextBox1.Text ?? "");
         }
 
@@ -189,17 +189,21 @@ namespace finalProject
 
         private bool IsAllEmpty()
         {
-           
+
             bool memoEmpty = string.IsNullOrWhiteSpace(richTextBox1.Text);
 
             bool timeEmpty = string.IsNullOrWhiteSpace(Exercise_Time_box.Text);
             bool typeEmpty = (Exercise_Type_Choose.SelectedIndex < 0);
 
-            
-                                                                         
+
+
 
             return memoEmpty && timeEmpty && typeEmpty;
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

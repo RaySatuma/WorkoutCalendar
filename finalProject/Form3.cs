@@ -14,7 +14,7 @@ namespace finalProject
 {
     public partial class Form3 : Form
     {
-        public static int _year,_month;
+        public static int _year, _month;
 
         public int Cal_temp;
         public string Language_temp;
@@ -56,17 +56,17 @@ namespace finalProject
 
         }
 
-       
-       
-        
 
-       
-        
+
+
+
+
+
 
         private void GoToPreviouMonthBtn_Click(object sender, EventArgs e)
         {
             _month -= 1;
-            if(_month < 1)
+            if (_month < 1)
             {
                 _month = 12;
                 _year -= 1;
@@ -74,7 +74,7 @@ namespace finalProject
             showDays(_month, _year);
         }
 
-        
+
         private void GoToNextMonthBtn_Click(object sender, EventArgs e)
         {
             _month += 1;
@@ -89,32 +89,32 @@ namespace finalProject
         private void showDays(int month, int year)
         {
             flowLayoutPanel1.Controls.Clear();
-            _year = year; 
-             _month = month;
+            _year = year;
+            _month = month;
 
             string monthName = new DateTimeFormatInfo().GetMonthName(month);
             lbMonth.Text = monthName.ToUpper() + " " + year;
-            
+
             //check what day of the week for day 1
-            DateTime startOfTheMonth = new DateTime(year, month,1);
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
 
             //check how many days in this month 
-            int day = DateTime.DaysInMonth(year,month);
-          
+            int day = DateTime.DaysInMonth(year, month);
+
             int week = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-            for(int i = 0; i< week; i++)
+            for (int i = 0; i < week; i++)
             {
                 ucDay uc = new ucDay("");
                 flowLayoutPanel1.Controls.Add(uc);
             }
             for (int i = 1; i <= day; i++)
             {
-                
+
 
                 var date = new DateTime(year, month, i);
 
-                bool hasMemo = HasMemo(date);            
-                ucDay uc = new ucDay(i.ToString(), hasMemo); 
+                bool hasMemo = HasMemo(date);
+                ucDay uc = new ucDay(i.ToString(), hasMemo);
 
                 uc.Click += (s, e) =>
                 {
@@ -129,9 +129,10 @@ namespace finalProject
                         this.Hide();
                         form4.ShowDialog();
                         this.Show();
-
-                       
-                        Cal_temp = form4.cal_from_F2;
+                        if (DateTime.Today == date)
+                        {
+                            Cal_temp = form4.cal_from_F2;
+                        }
                     }
 
                     uc.SetHasMemo(HasMemo(date));
